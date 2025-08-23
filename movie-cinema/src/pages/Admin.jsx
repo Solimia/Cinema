@@ -39,7 +39,7 @@ return (
 <input className="input" placeholder="Рейтинг (0-10)" type="number" step="0.1" value={mv.rating} onChange={e=>setMv({...mv,rating:e.target.value})} />
 <input className="input" placeholder="Жанри (через кому)" value={mv.genres} onChange={e=>setMv({...mv,genres:e.target.value})} />
 <input className="input" placeholder="URL постера" value={mv.poster} onChange={e=>setMv({...mv,poster:e.target.value})} />
-<input className="input" placeholder="YouTube трейлер (embed)" value={mv.trailer} onChange={e=>setMv({...mv,trailer:e.target.value})} />
+<input className="input" placeholder="YouTube трейлер" value={mv.trailer} onChange={e=>setMv({...mv,trailer:e.target.value})} />
 <input className="input" placeholder="Актори (через кому)" value={mv.cast} onChange={e=>setMv({...mv,cast:e.target.value})} />
 <textarea className="input" placeholder="Опис" value={mv.synopsis} onChange={e=>setMv({...mv,synopsis:e.target.value})} />
 <button className="btn primary" type="submit">+ Додати</button>

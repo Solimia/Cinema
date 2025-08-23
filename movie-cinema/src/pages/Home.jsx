@@ -2,7 +2,8 @@ import { useApp } from '../context/AppContext'
 import MovieCard from '../components/MovieCard'
 
 
-export default function Home(){
+export default function Home()
+{
 const { movies } = useApp()
 const newest = [...movies].sort((a,b)=> b.year - a.year).slice(0,6)
 const topRated = [...movies].sort((a,b)=> b.rating - a.rating).slice(0,6)

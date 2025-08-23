@@ -28,7 +28,7 @@ return (
 <div><b>Акторський склад:</b> {movie.cast.join(', ')}</div>
 <div className="row">
 <button className="btn primary" onClick={()=> window.scrollTo({top: document.body.scrollHeight, behavior:'smooth'})}>Дивитись трейлер</button>
-<button className="btn" onClick={()=> toggleFavorite(movie.id)}>{isFav? '− Прибрати з Обраних' : '+ Додати в Обрані'}</button>
+<button className="btn" onClick={()=> toggleFavorite(movie.id)}>{isFav? ' kik ' : '+ Додати в Обрані'}</button>
 </div>
 </div>
 </div>

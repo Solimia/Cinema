@@ -33,7 +33,7 @@ return (
 <h2>Розклад сеансів</h2>
 <SessionFilters initial={filters} onChange={setFilters} />
 <div style={{height:12}} />
-{!ids.length && <div style={{color:'var(--muted)'}}>Немає сеансів за вказаними фільтрами.</div>}
+{!ids.length && <div style={{color:'var(--muted)'}}>not</div>}
 <div style={{display:'grid', gap:16}}>
 {ids.map(id=> {
 const movie = movieById[id]
