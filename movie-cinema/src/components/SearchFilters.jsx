@@ -16,9 +16,9 @@ return (
 <div className="label">Жанр</div>
 <select value={form.genre} onChange={e=>setForm(f=>({...f,genre:e.target.value}))}>
 <option value="">Всі</option>
-<option>Adventure</option>
+<option>Horrors</option>
 <option>Animation</option>
-<option>Biography</option>
+<option>ActionMovie</option>
 <option>Comedy</option>
 <option>Criminal</option>
 <option>Drama</option>
