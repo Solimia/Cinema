@@ -32,37 +32,12 @@ synopsis: 'Історія створення атомної бомби та мо
 trailer: 'https://www.youtube.com/embed/uYPbbksJxIg',
 cast: ['Cillian Murphy','Emily Blunt','Matt Damon']
 },
-{
-id: 'mov_opheimer',
-title: 'Oppenheimer',
-year: 2023,
-rating: 8.4,
-genres: ['Biography','Drama'],
-poster: 'https://m.media-amazon.com/images/M/MV5BNDJmNTc1ZjEt.jpg',
-synopsis: 'Історія створення атомної бомби та моральна дилема Оппенгеймера.',
-trailer: 'https://www.youtube.com/embed/uYPbbksJxIg',
-cast: ['Cillian Murphy','Emily Blunt','Matt Damon']
-},
-{
-id: 'mov_oppenher',
-title: 'Oppenheimer',
-year: 2023,
-rating: 8.4,
-genres: ['Biography','Drama'],
-poster: 'https://m.media-amazon.com/images/M/MV5BNDJmNTc1ZjEt.jpg',
-synopsis: 'Історія створення атомної бомби та моральна дилема Оппенгеймера.',
-trailer: 'https://www.youtube.com/embed/uYPbbksJxIg',
-cast: ['Cillian Murphy','Emily Blunt','Matt Damon']
-},
 ]
 
 
-// Сеанси: одна дата/час = один сеанс
 export const seedSessions = [
 { id:'ses1', movieId:'mov_dune2', date:'2025-08-23', time:'17:30', hall:'IMAX', lang:'UA', price: 250 },
 { id:'ses2', movieId:'mov_dune2', date:'2025-08-24', time:'20:10', hall:'IMAX', lang:'UA', price: 270 },
 { id:'ses3', movieId:'mov_insideout2', date:'2025-08-23', time:'15:00', hall:'2D', lang:'UA', price: 180 },
 { id:'ses4', movieId:'mov_oppenheimer', date:'2025-08-24', time:'18:40', hall:'Dolby', lang:'UA', price: 220 },
-{ id:'ses5', movieId:'mov_insideout2', date:'2025-08-23', time:'15:00', hall:'2D', lang:'UA', price: 180 },
-{ id:'ses6', movieId:'mov_insideout2', date:'2025-08-23', time:'15:00', hall:'2D', lang:'UA', price: 180 },
 ]

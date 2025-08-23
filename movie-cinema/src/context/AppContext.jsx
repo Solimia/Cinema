@@ -28,17 +28,17 @@ useEffect(()=> writeLS(LS_KEYS.sessions, sessions), [sessions])
 useEffect(()=> writeLS(LS_KEYS.favorites, favorites), [favorites])
 
 
-// CRUD: Movies
+// Movies
 const addMovie = (movie)=> setMovies(prev=> [{...movie, id:genId('mov')}, ...prev])
 const updateMovie = (id, patch)=> setMovies(prev=> prev.map(m=> m.id===id? {...m, ...patch}: m))
 const removeMovie = (id)=> {
 setMovies(prev=> prev.filter(m=> m.id!==id))
-setSessions(prev=> prev.filter(s=> s.movieId!==id)) // каскадно
+setSessions(prev=> prev.filter(s=> s.movieId!==id)) 
 setFavorites(prev=> prev.filter(fid=> fid!==id))
 }
 
 
-// CRUD: Sessions
+//Sessions
 const addSession = (session)=> setSessions(prev=> [{...session, id:genId('ses')}, ...prev])
 const updateSession = (id, patch)=> setSessions(prev=> prev.map(s=> s.id===id? {...s, ...patch}: s))
 const removeSession = (id)=> setSessions(prev=> prev.filter(s=> s.id!==id))
@@ -60,5 +60,4 @@ return <AppContext.Provider value={value}>{children}</AppContext.Provider>
 }
 
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const useApp = ()=> useContext(AppContext)
