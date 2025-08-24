@@ -9,7 +9,7 @@ const list = movies.filter(m=> favorites.includes(m.id))
 return (
 <div className="section">
 <h2>Обрані</h2>
-{list.length? <div className="grid">{list.map(m=> <MovieCard key={m.id} movie={m} />)}</div> : <EmptyState hint="Додайте фільми на сторінці детальної інформації або на картці." />}
+{list.length? <div className="grid">{list.map(m=> <MovieCard key={m.id} movie={m} />)}</div> : <EmptyState hint="Додайте фільми " />}
 </div>
 )
 }
