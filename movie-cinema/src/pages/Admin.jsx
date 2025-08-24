@@ -6,7 +6,7 @@ export default function Admin() {
     const { movies, sessions, addMovie, removeMovie, addSession, removeSession } = useApp()
 
 
-    // Форма фільмів
+    /*____________________________________________________Фільми_________________________________________________________________________________*/
     const [mv, setMv] = useState({ title: '', year: '', rating: '', genres: '', poster: '', synopsis: '', trailer: '', cast: '' })
     const submitMovie = (e) => {
         e.preventDefault(); if (!mv.title) return; addMovie({
@@ -22,7 +22,7 @@ export default function Admin() {
     }
 
 
-    // Форма сеансів
+    /*____________________________________________________Сеанси___________________________________________________________________________________*/
     const [ss, setSs] = useState({ movieId: '', date: '', time: '', hall: '', lang: 'UA', price: '' })
     const submitSession = (e) => {
         e.preventDefault(); if (!ss.movieId || !ss.date || !ss.time) return; addSession({
@@ -41,10 +41,10 @@ export default function Admin() {
                 <input className="input" placeholder="Назва" value={mv.title} onChange={e => setMv({ ...mv, title: e.target.value })} />
                 <input className="input" placeholder="Рік" type="number" value={mv.year} onChange={e => setMv({ ...mv, year: e.target.value })} />
                 <input className="input" placeholder="Рейтинг (0-10)" type="number" step="0.1" value={mv.rating} onChange={e => setMv({ ...mv, rating: e.target.value })} />
-                <input className="input" placeholder="Жанри (через кому)" value={mv.genres} onChange={e => setMv({ ...mv, genres: e.target.value })} />
+                <input className="input" placeholder="Жанри " value={mv.genres} onChange={e => setMv({ ...mv, genres: e.target.value })} />
                 <input className="input" placeholder="URL постера" value={mv.poster} onChange={e => setMv({ ...mv, poster: e.target.value })} />
                 <input className="input" placeholder="YouTube трейлер" value={mv.trailer} onChange={e => setMv({ ...mv, trailer: e.target.value })} />
-                <input className="input" placeholder="Актори (через кому)" value={mv.cast} onChange={e => setMv({ ...mv, cast: e.target.value })} />
+                <input className="input" placeholder="Актори " value={mv.cast} onChange={e => setMv({ ...mv, cast: e.target.value })} />
                 <textarea className="input" placeholder="Опис" value={mv.synopsis} onChange={e => setMv({ ...mv, synopsis: e.target.value })} />
                 <button className="btn primary" type="submit">+ Додати</button>
             </form>
@@ -71,6 +71,7 @@ export default function Admin() {
                 ))}
             </div>
 
+/*_______________________________________________________________________________________________________________________*/
 
             <div style={{ height: 24 }} />
             <h3>Додати сеанс</h3>
@@ -81,7 +82,7 @@ export default function Admin() {
                 </select>
                 <input className="input" type="date" value={ss.date} onChange={e => setSs({ ...ss, date: e.target.value })} />
                 <input className="input" type="time" value={ss.time} onChange={e => setSs({ ...ss, time: e.target.value })} />
-                <input className="input" placeholder="Зал (2D/IMAX/Dolby)" value={ss.hall} onChange={e => setSs({ ...ss, hall: e.target.value })} />
+                <input className="input" placeholder="Зал (2D/IMAX/3D)" value={ss.hall} onChange={e => setSs({ ...ss, hall: e.target.value })} />
                 <input className="input" placeholder="Мова" value={ss.lang} onChange={e => setSs({ ...ss, lang: e.target.value })} />
                 <input className="input" type="number" placeholder="Ціна" value={ss.price} onChange={e => setSs({ ...ss, price: e.target.value })} />
                 <button className="btn primary" type="submit">+ Додати</button>
